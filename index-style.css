@@ -9,7 +9,7 @@ body{
     background-color: #2274A5;
     min-height: 100px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
 }
 
@@ -46,4 +46,16 @@ body{
     list-style-type: none;
     margin: 0; padding: 0;
 
+}
+
+#name{
+    display: block;
+    align-self: center; justify-self: center;
+    font-size: 3rem; font-weight: 900;
+    color: #154663;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 }
