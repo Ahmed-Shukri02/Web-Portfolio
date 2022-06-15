@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content = "My javascript calculator">
+    <meta title="Calculator">
+
+    <link rel ="stylesheet" href="calculator-style.css">
+    <link rel = "stylesheet" href="../index-style.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo" style="display: grid;">
+            <div id = "name">Ahmed</div>
+        </div>
+        <div><!-- empty div to seperate two header--> </div>
+        <div id="about">
+            <ul id="list">
+                <li> Home </li>
+                <li> About </li>
+                <li> Topics </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div></div>
+
+        <div id="centre" style="display: grid; grid-template-rows: auto 1fr auto;"> 
+            <div style="font-size: 3rem; color: #154663; font-weight: 1000;
+            padding-top: 1rem; text-align: center; display: grid;"> 
+                My JavaScript calculator
+            </div>
+
+            <div id= "calc-body" style="height: 100%; width: 100%; background-color:#154663;
+            display: grid; grid-template-rows: 1fr 1fr 3fr; border-radius: 35px;">
+                <div id = "prev-ans" style="background-color: lightgray;">
+                    <div></div>
+                </div>
+
+                <div id="current-value" style="background-color: lightgray;">
+                    <div></div>
+                </div>
+
+                <div id="numpad">
+                    <div id="numbers">
+                        <div id="one"> <div>1</div> </div>
+                        <div id="two"> <div>2</div> </div>
+                        <div id="three"> <div>3</div> </div>
+                        <div id="four"> <div>4</div> </div>
+                        <div id="five"> <div>5</div> </div>
+                        <div id="six"> <div>6</div> </div>
+                        <div id="seven"> <div>7</div> </div>
+                        <div id="eight"> <div>8</div> </div>
+                        <div id="nine"> <div>9</div> </div>
+                        <div id="zero"> <div>0</div> </div>
+                    </div>
+
+                    <div id="operations">
+                        <div id="add"> <div>+</div> </div>
+                        <div id="take"> <div>-</div> </div>
+                        <div id="multiply"> <div>X</div> </div>
+                        <div id="divide"> <div>/</div> </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="height: 100px;"></div>
+
+        </div>
+
+        <div></div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+
+    <script src="calculator.js"></script>
+</body>

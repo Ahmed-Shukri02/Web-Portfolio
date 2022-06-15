@@ -1,0 +1,44 @@
+#calc-body >*{
+    width: 80%;
+    justify-self: center;
+    margin-bottom: 5%;
+    border-radius: 15px;
+}
+
+#calc-body{
+    padding: 5% 5%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#numpad{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 5%;
+    box-sizing: border-box;
+}
+
+#numpad >*{
+    border-radius: inherit;
+}
+
+#numbers{
+    display: grid;
+    grid-template: repeat(4, 1fr)/ repeat(3, 1fr);
+    grid-gap: 5%;
+}
+
+#operations{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5%
+}
+
+#numbers >*, #operations>*{
+    background-color: lightgray;
+    border-radius: inherit;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
+
