@@ -14,7 +14,7 @@
         <div><!-- empty div to seperate two header--> </div>
         <div id="about">
             <ul id="list">
-                <li> Home </li>
+                <li> <a href="index.html">Home</a> </li>
                 <li> About </li>
                 <li> Topics </li>
             </ul>
@@ -36,22 +36,34 @@
             </div>
 
             <div style="background-color: #154663; min-width: 100%; min-height: 50%; 
-            margin-top: 5%; display: grid; grid-template-rows: 1fr 3fr; border-radius: 25px;
+            margin-top: 5%; display: grid; grid-template-columns: 1fr 1fr; border-radius: 25px;
             position: relative;">
-            
-                <div style="color: lightgray; font-size: 2rem; margin-top: 1rem; 
-                justify-self: center; font-weight: 1000; text-align: center; padding: 0 1rem;"> 
-                My calculator using basic JavaScript 
+
+                <div id="calculator" style="display: grid; grid-template-rows: 1fr 3fr;">
+                    
+                    <div class="subtitle"> 
+                    My calculator using basic JavaScript 
+                    </div>
+    
+                    <div class="preview">
+                        <a href="Calculator\calculator.html" style="cursor: pointer; height: 100%
+                        ; width: 100%; display:block">  </a>
+                    </div>
+    
                 </div>
 
-                <div style="display: grid;">
-                        <div style="background-color: white; height: 90%;
-                        width: 90%; justify-self: center; align-self: start; border-radius: 20px;">
-                        
-                        </div>
-                </div>
+                <div id="clock" style="display: grid; grid-template-rows: 1fr 3fr;">
+                    
+                    <div class="subtitle"> 
+                    My clock  using basic JavaScript 
+                    </div>
+    
+                    <div class="preview">
+                        <a href="Clock/clock.html" style="cursor: pointer; height: 100%
+                        ; width: 100%; display:block">  </a>
+                    </div>
 
-                <a href="Calculator\calculator.html"> <span id = "clickDiv"></span> </a>
+                </div>
             </div>
             
             <!--create empty div to insert space at the bottom-->
@@ -62,7 +74,7 @@
     </div>
 
     <div id="footer">
-        
+        <div id="footer-text"> © Ahmed Shukri 2022 </div>
     </div>
     
     <script src="index-script.js"></script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login screen</title>
+</head>
+
+<body>
+    
+    <form action="results.html" method="GET">
+        <div>
+            <label for="email"> Email </label>
+            <input type="email" id="email" name="email">
+
+        </div>
+        
+        <div>
+            <label for="fname">Username</label>
+            <input id="fname" name="fname" required max="8">
+        </div>
+
+        <div>
+            <label for="lname"> Password</label>
+            <input type="password" id="lname" name="lname" required>
+        </div>
+
+        <div>
+            <label for="male"> Male </label>
+            <input type="radio" id="male" name="gender" value="male">
+
+            <label for="female"> Female </label>
+            <input type="radio" id="female" name="gender" value="female">
+        </div>
+
+        <div>
+            <label for="type"> I am a ...</label>
+        </div>
+        <div>
+            <select id="type" name="userType">
+                <option val="student"> Student </option>
+                <option val="teacher"> Teacher </option>
+                <option val="viewer"> Viewer </option>
+            </select>
+        </div>
+
+        <div>
+            <label for="consent"> I consent to the terms and conditions </label>
+            <input type="checkbox" id="consent" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

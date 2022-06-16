@@ -48,15 +48,14 @@ document.getElementById("equals").addEventListener("click", function(){
   equation_list.push(term_str);
   term_str = "";
 
-  //alert(equation_list)
-
   // compute answer
   var final_equation = ""
   for(i = 0; i< equation_list.length; i++){
     final_equation += equation_list[i];
   }
   final_ans = eval(final_equation);
-  alert(final_equation);
+  
+  
   prev_ans.innerHTML = final_ans;
 
   // clear list
