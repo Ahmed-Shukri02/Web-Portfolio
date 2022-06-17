@@ -6,28 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login screen</title>
+
+    <link rel="stylesheet" href="login-style.css">
 </head>
 
 <body>
     
-    <form action="results.html" method="GET">
+    <form action="results.html" method="GET" id="login-form">
+        
+        <div style="font-size: 2rem; font-weight: 1000; color: #154663; justify-self: center;"> Login</div>
+
         <div>
-            <label for="email"> Email </label>
+            <label for="email" class="block-label"> Email </label>
             <input type="email" id="email" name="email">
 
         </div>
         
         <div>
-            <label for="fname">Username</label>
-            <input id="fname" name="fname" required max="8">
+            <label for="fname" class="block-label">Username</label>
+            <input type="text" id="fname" name="fname" required max="8">
         </div>
 
         <div>
-            <label for="lname"> Password</label>
+            <label for="lname" class="block-label"> Password</label>
             <input type="password" id="lname" name="lname" required>
         </div>
 
         <div>
+            <div class="block-label" style="justify-self: center;"><div>I am a...</div></div>
+            
             <label for="male"> Male </label>
             <input type="radio" id="male" name="gender" value="male">
 
@@ -35,10 +42,10 @@
             <input type="radio" id="female" name="gender" value="female">
         </div>
 
-        <div>
-            <label for="type"> I am a ...</label>
-        </div>
-        <div>
+        <div style="display: grid; justify-content: center;" >
+            
+            <label for="type" class="block-label"> I am also a ...</label>
+            
             <select id="type" name="userType">
                 <option val="student"> Student </option>
                 <option val="teacher"> Teacher </option>
@@ -51,7 +58,8 @@
             <input type="checkbox" id="consent" required>
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit"><div>Submit</div></button>
+        <button type="button" onclick="window.location.href='../index.html'"><div> Back </div></button>
     </form>
 
 </body>

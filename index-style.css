@@ -95,4 +95,17 @@ a{
     height: 90%; 
     justify-self: center; 
     align-self: center;
+    transition: all .3s ease-out;
+}
+
+.preview :hover{
+    all: inherit;
+    border-radius: 20px;
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+.preview :not(:hover){
+    all: inherit;
+    transition: all .3s ease-out;
 }
