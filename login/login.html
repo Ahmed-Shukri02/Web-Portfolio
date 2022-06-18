@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    
-    <form action="results.html" method="GET" id="login-form">
+    <!-- form for signing up -->
+    <form action="results.html" method="GET" class="login-form" id="sign">
         
-        <div style="font-size: 2rem; font-weight: 1000; color: #154663; justify-self: center;"> Login</div>
+        <div style="font-size: 3rem; font-weight: 1000; color: #154663; justify-self: center;"> Sign-Up </div>
 
         <div>
             <label for="email" class="block-label"> Email </label>
@@ -23,13 +23,13 @@
         </div>
         
         <div>
-            <label for="fname" class="block-label">Username</label>
-            <input type="text" id="fname" name="fname" required max="8">
+            <label for="sign-fname" class="block-label">Username</label>
+            <input type="text" id="sign-fname" name="fname" required max="8">
         </div>
 
         <div>
-            <label for="lname" class="block-label"> Password</label>
-            <input type="password" id="lname" name="lname" required>
+            <label for="sign-pass" class="block-label"> Password</label>
+            <input type="password" id="sign-pass" name="lname" required>
         </div>
 
         <div>
@@ -53,15 +53,45 @@
             </select>
         </div>
 
-        <div>
+        <div id="consent">
             <label for="consent"> I consent to the terms and conditions </label>
             <input type="checkbox" id="consent" required>
         </div>
 
-        <button type="submit"><div>Submit</div></button>
-        <button type="button" onclick="window.location.href='../index.html'"><div> Back </div></button>
+        <div id="sign-buttonContainer" class="buttonContainer" style="display: grid; grid-template-columns: 1fr 1fr;">
+            <button type="button" class="submitButton" ><div>Submit</div></button>
+            <button type="button" class="switch"><div>Log-in</div></button>
+        </div>
+        <button type="button" onclick="window.location.href='../index.html'" id="sign-backButton" class="backButton">
+            <div> Back </div>
+        </button>
     </form>
 
+    <!-- form for logging in up -->
+    <form action="results.html" method="GET" class="login-form" id="login">
+        
+        <div style="font-size: 3rem; font-weight: 1000; color: #154663; justify-self: center;"> Login</div>
+        
+        <div>
+            <label for="log-fname" class="block-label">Username</label>
+            <input type="text" id="log-fname" name="fname" required max="8">
+        </div>
+
+        <div>
+            <label for="log-pass" class="block-label"> Password</label>
+            <input type="password" id="log-pass" name="lname" required>
+        </div>
+
+        <div id="log-buttonContainer" class="buttonContainer" style="display: grid; grid-template-columns: 1fr 1fr;">
+            <button type="button" class="submitButton"><div>Submit</div></button>
+            <button type="button" class="switch"><div>Sign-Up</div></button>
+        </div>
+        <button type="button" onclick="window.location.href='../index.html'" id="log-backButton" class="backButton">
+            <div> Back </div>
+        </button>
+    </form>
+
+    <script src="login-script.js"></script>
 </body>
 
 </html>
