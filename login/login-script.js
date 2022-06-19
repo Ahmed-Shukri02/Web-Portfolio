@@ -11,6 +11,10 @@ toLogin.addEventListener("click", function(){Toggle(SignUp, Login)});
 Toggle(SignUp, Login);
 addFormListeners([SignUp, Login]);
 
+const formErrors = {emptyField: "field is empty, try again", shortPass: "password \
+needs to be at least 8 characters", noRadio: "Please select one", noCheck: "\
+checkbox needs to be checked", emailError: "Please enter a valid email"};
+
 
 function addFormListeners(form_list){
     for(var i =0; i<form_list.length; i++){
@@ -38,6 +42,9 @@ function addFormListeners(form_list){
                     submitButton.disabled = false;
                     backButton.disabled = false;
                     
+                    // find the parameter(s) that have not been met
+                    setErrors(form);
+                    
                     // do nothing if error message is already there
                     if(form.querySelector(".errorDiv") != null){
                         // do transition where text flashes or smth 
@@ -64,6 +71,83 @@ function addFormListeners(form_list){
     
 }
 
+function setErrors(form){
+    var formData = new FormData(form);
+
+    //begin by removing all error elements
+    for(var errorElem of document.querySelectorAll(".error")){
+        errorElem.remove();
+    }
+    
+    // set condition for adding errors: there should be an existing element and also 
+    //no previous error
+    genderCondition = (form.querySelector("#gender-block") != null && form.querySelector(".noRadio") == null);
+    consentConsition = (form.querySelector("#consent-box") != null && form.querySelector(".noConsent") == null);
+
+    formKeys = Array.from(formData.keys());
+    if(!formKeys.includes("gender") && genderCondition){
+        // find gender radio and its parent
+        let genderRadio = document.getElementById("male");
+        InsertError(form, formErrors.noRadio, genderRadio, errorType = "noRadio");
+    }
+    
+    // check if checkbox has not been checked
+    if(!formKeys.includes("consent") && consentConsition){
+        let consentBox = document.getElementById("consent");
+        InsertError(form, formErrors.noCheck, consentBox, errorType = "noConsent");
+    }
+    
+    // for everything else, check if format is valid
+    for(var [key, value] of formData){
+        
+        // check for keys with invalid data
+        console.log(key);
+        switch(key){
+            case "email":
+                // check if email is valid
+                console.log("adding email error from " + form.id);
+                let email = form.elements["email"];
+
+                if(!email.checkValidity()){ InsertError(form, formErrors.emailError, email); }
+                else if(value.length == 0){ InsertError(form, formErrors.emptyField, email); }
+                continue;
+
+            case "fname":
+                // check if field is not empty
+                console.log("adding fname error from " + form.id);
+                let fname = form.elements["fname"];
+                console.log(fname);
+                if(value.length == 0){ InsertError(form, formErrors.emptyField, fname); }
+                continue;
+
+            case "lname":
+                console.log("adding lname error from " + form.id);
+                let pass = form.elements["lname"];
+                console.log(key + "is equal to lname");
+                if(value.length == 0){ InsertError(form, formErrors.emptyField, pass)}
+                continue;
+
+        }
+
+    }
+
+}
+
+function InsertError(form, message, input, errorType = ""){
+    let parent = input.parentElement;
+    //console.log(parent.id, form.id);
+
+    // create div with checkbox error tect
+    formError = document.createElement("div");
+    formErrorText = document.createTextNode(message);
+    formError.style.paddingTop = "1rem";
+    formError.style.color = "red";
+    formError.setAttribute("class", "error " + errorType);
+    formError.append(formErrorText);
+
+    // add error div 
+    form.insertBefore(formError, parent)
+}
 
 function submitForm(lForm){
     // add div to cover login form 
