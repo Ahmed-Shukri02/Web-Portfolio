@@ -28,10 +28,23 @@
     <div id="main">
         <div></div>
 
-        <div id="centre" style="display: grid; grid-template-rows: auto;"> 
-            <div style="font-size: 3rem; color: #154663; font-weight: 1000;
-            padding-top: 1rem; text-align: center; display: grid;"> 
+        <div id="centre"> 
+            <div style="font-size: 3rem; color: #154663; font-weight: 1000; padding-top: 1rem; text-align: center; display: grid;"> 
                 My weather app
+            </div>
+            <button id="button1">Click for weather update</button>
+
+            <div id="weather-container">
+                <img class ="weather-bg"src="sunnyGif.gif" alt="a sunny gif">
+                <div id="data">
+                    <div class="temp" style="display: grid; grid-template-rows: 1fr 1fr; justify-content: center; align-content: center;">
+                        <div id="city">London</div>
+                        <div id="current-temp">25</div>
+                    </div>
+
+                    <img src="sun.jpg" style="align-self: center; justify-self: center;">
+
+                </div>
             </div>
         </div>
 
