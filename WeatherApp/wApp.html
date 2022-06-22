@@ -28,24 +28,49 @@
     <div id="main">
         <div></div>
 
-        <div id="centre"> 
+        <div id="centre" style="display: flex; flex-direction: column; gap: 1rem;"> 
             <div style="font-size: 3rem; color: #154663; font-weight: 1000; padding-top: 1rem; text-align: center; display: grid;"> 
                 My weather app
             </div>
-            <button id="button1">Click for weather update</button>
+
+            <form id="settingForm">
+                
+                <div>
+                    <label for="city-select"> City </label>
+                    <input id="city-select" name="city1" required>
+                </div>
+
+                <button type="submit" id="button1">Click for weather update</button>
+            </form>
 
             <div id="weather-container">
                 <img class ="weather-bg"src="sunnyGif.gif" alt="a sunny gif">
                 <div id="data">
-                    <div class="temp" style="display: grid; grid-template-rows: 1fr 1fr; justify-content: center; align-content: center;">
-                        <div id="city">London</div>
-                        <div id="current-temp">25</div>
+                    <div class="temp" style="display: grid; justify-content: center;">
+                        <div style="margin-top: 4rem; margin-left:1rem">
+                            <div id="city" style="font-size: 4rem; font-weight: 700;">London</div>
+                            <br/>
+                            <div id="current-temp" style="text-align: center; font-weight: 500; font-size: 5rem;">25°C</div>
+                        </div>
                     </div>
 
-                    <img src="sun.jpg" style="align-self: center; justify-self: center;">
+                    <div style="display: grid;">
+                        <img id="weather-image" src="sun.jpg" style="align-self: center; justify-self: center; width: 40%; aspect-ratio: 1/1;">
+                    </div>
+
+                    <div style="display: grid; justify-content: center; align-content: center;">
+                        <div id="wind">
+                            Wind: 10kph
+                        </div>
+                        <div id="wind-dir">
+                            Wind direction: East
+                        </div>
+                    </div>
 
                 </div>
             </div>
+
+            <div> </div>
         </div>
 
         <div></div>
