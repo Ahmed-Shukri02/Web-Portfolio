@@ -1,0 +1,96 @@
+/* general styling for page
+========================*/
+
+body{
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; margin: 0;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: #154663;
+}
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ========================*/
+
+
+/*  style for header
+========================*/
+
+header{
+    background-color: #2274A5;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    margin: auto 0;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0; padding: 0;
+    margin: auto 0;
+}
+
+nav li{
+    float: left;
+    display: block;
+    font-size: 1.3rem;
+    color:lightgray;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+nav a{
+    all: unset;
+}
+
+nav li:hover{
+    background-color: #154663;
+    cursor: pointer;
+}
+
+@media (max-width: 650px){
+    .header-container{
+        flex-direction: column;
+    }
+
+    #title, nav{
+        margin: 0 auto;
+    }
+}
+
+
+/*  style for footer
+========================*/
+
+#footer{
+    background-color: #2274A5;
+    min-height: 5em;
+    display: grid;
+}
+
+.footer-container{
+    justify-self: center;
+    align-self: center;
+}
+
+#footer-text{
+    text-align: center;
+}
+
+/* ========================*/
