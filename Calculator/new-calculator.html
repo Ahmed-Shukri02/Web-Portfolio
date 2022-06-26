@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Calc</title>
+    <link rel="stylesheet" href="new-calculator-style.css">
+    <link rel="stylesheet" href="../template-style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 id="title"> Ahmed </h1>
+            
+            <nav><ul>
+                <li> <a href="../Index/new-index.html">Home</a> </li>
+                <li> About </li>
+                <li> Topics </li>
+                <li> <a href="../login/login.html"> Login </a> </li>
+            </ul></nav>
+        </div> <!-- end of header container-->
+    </header>
+
+    <div id="main">
+        <div class="container">
+            <h1 class="centered"> My javascript Calculator </h1> <br/>
+            <div class="calc-container">
+                <div id = "prev-ans" class="vals">
+                    <div id = "prev-ans-text"></div>
+                </div>
+    
+                <div id="current-value" class="vals">
+                    <div id = "current-value-text"></div>
+                </div>
+    
+                <div id="numpad">
+                    <div id="numbers">
+                        <div id="one"> <div>1</div> </div>
+                        <div id="two"> <div>2</div> </div>
+                        <div id="three"> <div>3</div> </div>
+                        <div id="four"> <div>4</div> </div>
+                        <div id="five"> <div>5</div> </div>
+                        <div id="six"> <div>6</div> </div>
+                        <div id="seven"> <div>7</div> </div>
+                        <div id="eight"> <div>8</div> </div>
+                        <div id="nine"> <div>9</div> </div>
+                        <div id="zero"> <div>0</div> </div>
+                        <div id="equals"> <div>=</div> </div>
+                    </div>
+    
+                    <div id="operations">
+                        <div id="add"> <div>+</div> </div>
+                        <div id="take"> <div>-</div> </div>
+                        <div id="multiply"> <div>X</div> </div>
+                        <div id="divide"> <div>/</div> </div>
+                    </div>
+                </div>
+            </div> <!--end of calculator container-->
+        </div> <!-- end of main container-->
+    </div>
+
+    <div id="footer">
+        <div class="container footer-container">
+            <div id="footer-text"> © Ahmed Shukri 2022 </div>
+        </div> <!-- end of footer container-->
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

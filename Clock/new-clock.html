@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Index</title>
-    <link rel="stylesheet" href="template-style.css">
+    <link rel="stylesheet" href="new-clock-style.css">
+    <link rel="stylesheet" href="../template-style.css">
 </head>
 
 
@@ -15,17 +16,23 @@
             <h1 id="title"> Ahmed </h1>
             
             <nav><ul>
-                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="../Index/new-index.html">Home</a> </li>
                 <li> About </li>
                 <li> Topics </li>
-                <li> <a href="login/login.html"> Login </a> </li>
+                <li> <a href="../login/login.html"> Login </a> </li>
             </ul></nav>
         </div> <!-- end of header container-->
     </header>
 
     <div id="main">
         <div class="container">
-            ENTER TEXT HERE
+            <h1 class="centered"> My digital clock </h1>
+
+            <div id="timer-holder">
+                <img src="wave-gif.gif"/>
+                <div id="timer"><div id = "timer-text"></div></div>
+            </div>
+
         </div> <!-- end of main container-->
     </div>
 
@@ -34,5 +41,7 @@
             <div id="footer-text"> © Ahmed Shukri 2022 </div>
         </div> <!-- end of footer container-->
     </div>
+
+    <script src="clock-script.js"></script>
 </body>
 </html>

@@ -20,6 +20,21 @@ h1{
     margin: 0 auto;
 }
 
+
+/* Any anchor inside a div will be spread across entire div so it is clickable */
+div a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+/* center any text with the centered class tag */
+.centered{
+    text-align: center;
+}
+
+
 /* ========================*/
 
 
@@ -64,6 +79,17 @@ nav li:hover{
     cursor: pointer;
 }
 
+/* add styling for current page */
+.current-page{
+    border-radius: unset;
+    color: #154663;
+    border-bottom: 1px solid #154663;
+}
+
+.current-page:hover{
+    background-color: unset;
+}
+
 @media (max-width: 650px){
     .header-container{
         flex-direction: column;
@@ -74,12 +100,25 @@ nav li:hover{
     }
 }
 
+@media (max-width: 425px){
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li{
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+}
 
 /*  style for footer
 ========================*/
 
 #footer{
     background-color: #2274A5;
+    margin-top: 5em;
     min-height: 5em;
     display: grid;
 }
