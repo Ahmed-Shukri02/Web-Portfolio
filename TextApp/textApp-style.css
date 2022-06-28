@@ -1,0 +1,76 @@
+#text-app {
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  overflow-y: scroll;
+}
+#text-app .card {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+#text-app .card:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.about {
+  flex-direction: row;
+  flex-basis: 30%;
+  display: flex;
+  gap: 5%;
+  margin: auto 0;
+}
+.about img {
+  max-width: 60%;
+}
+.about img {
+  display: block;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about .info {
+  font-size: 0.8rem;
+  margin: auto 0;
+}
+
+.text {
+  flex-basis: 70%;
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid lightslategray;
+  border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    max-width: 100%;
+  }
+
+  .username {
+    text-align: center;
+  }
+}
+form .textbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+form .textbox textarea {
+  flex-basis: 90%;
+  resize: none;
+}
+form .textbox div {
+  flex-basis: 8%;
+}
+form .textbox div button {
+  display: block;
+  height: 2em;
+  width: 100%;
+  margin: auto auto;
+}/*# sourceMappingURL=textApp-style.css.map */

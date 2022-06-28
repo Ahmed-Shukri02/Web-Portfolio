@@ -1,0 +1,89 @@
+$bPadding : 1em;
+
+@mixin aboutFlex($dir, $img-size){
+    flex-direction: $dir;
+
+    img{
+        max-width: $img-size;
+    }
+}
+
+
+#text-app{
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    overflow-y: scroll;
+
+    .card{
+        padding: $bPadding;
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+
+        &:nth-child(odd){
+            background-color: lightgray;
+        }
+    }
+}
+
+.about{
+    @include aboutFlex(row, 60%);
+    
+    flex-basis: 30%;
+    display: flex;
+    gap: 5%;
+    margin: auto 0;
+
+    img{
+        display: block;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    .info{
+        font-size: .8rem;
+        margin: auto 0;
+    }
+
+}
+
+.text{
+    flex-basis: 70%;
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid lightslategray;
+    border-radius: 10px
+}
+
+@media (max-width: 650px){
+    .about{
+        @include aboutFlex(column, 100%);
+    }
+
+    .username{
+        text-align: center;
+    }
+
+}
+
+form .textbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    textarea{
+        flex-basis: 90%;
+        resize: none;
+    }
+    div{
+        flex-basis: 8%;
+        button{
+            display: block;
+            height: 2em;
+            width: 100%;
+            margin: auto auto;
+        }
+    }
+}
