@@ -1,19 +1,17 @@
-dataDiv = document.getElementById("data");
-myButton = document.getElementById("button1");
-myForm = document.getElementById("settingForm");
-formText = document.getElementById("city-select");
-// cache all div elements that will be changed
-var c_city = document.getElementById("city");
-var temp = document.getElementById("current-temp");
-var wImage = document.getElementById("weather-image");
-var wind = document.getElementById("wind");
-var windDir = document.getElementById("wind-dir");
-var weatherBg = document.querySelector(".weather-bg");
+const dataDiv = document.getElementById("data");
+const myForm = document.getElementById("weather-form");
+const formText = document.getElementById("text");
+const c_city = document.getElementById("city");
+const temp = document.getElementById("current-temp");
+const wImage = document.getElementById("weather-image");
+const wind = document.getElementById("wind");
+const windDir = document.getElementById("wind-dir");
+const weatherBg = document.querySelector(".weather-bg");
 
 var city = "Paris";
 var current_code = 0;
 var current_isDay = 0;
-timeoutID = updateWeather(updated = false);
+var timeoutID = updateWeather(updated = false);
 
 // sun/light clouds from 1000-1049
 // fog from 1050-1149

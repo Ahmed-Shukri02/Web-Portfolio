@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="new-wApp-style.css"/>
+    <link rel="stylesheet" href="../template-style.css"/>
+</head>
+
+
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 id="title"> Ahmed </h1>
+            
+            <nav><ul>
+                <li> <a href="../Index/new-index.html">Home</a> </li>
+                <li> About </li>
+                <li> Topics </li>
+                <li> <a href="../login/login.html"> Login </a> </li>
+            </ul></nav>
+        </div> <!-- end of header container-->
+    </header>
+
+    <div id="main">
+        <div class="container">
+            <h1 class="centered"> My Weather App </h1>
+            <br/>
+
+            <div id="weather-container">
+                <img class ="weather-bg"src="rainyGif.gif" alt="a sunny gif">
+                <div id="data">
+                    <div class="temp">
+                        <div id="city" class="centered">London</div>
+                        <div id="current-temp">25°C</div>
+                    </div>
+
+                    <div class="icon">
+                        <img id="weather-image" src="sun.jpg">
+                    </div>
+
+                    <div class="wind-info">
+                        <div id="wind">
+                            Wind: 10kph
+                        </div>
+                        <div id="wind-dir">
+                            Wind direction: East
+                        </div>
+                    </div>
+
+                </div> 
+            </div> <!--end of weather container-->
+
+            <br/>
+
+            <form id="weather-form">
+                <p class="centered">Enter the city (or country) that you want to check</p>
+                
+                <div id="input-wrapper">
+                    <input id="text" type="text"/>
+                    <button id="submit" type="submit"> Submit </button>
+                </div>
+            </form>
+        </div> <!-- end of main container-->
+    </div>
+
+    <div id="footer">
+        <div class="container footer-container">
+            <div id="footer-text"> © Ahmed Shukri 2022 </div>
+        </div> <!-- end of footer container-->
+    </div>
+
+    <script src="wApp-script.js"></script>
+</body>
+</html>

@@ -5,9 +5,10 @@
 */
 
 const medQuery = window.matchMedia("(max-width: 650px)");
-var disabledInfo = document.querySelectorAll(".online, .email");
 
 function handleChange(e){
+    let disabledInfo = document.querySelectorAll(".online, .email");
+
     if(e.matches){
         // small screen, disable all unnecesary info
         for(let info of disabledInfo){
@@ -76,6 +77,8 @@ messageForm.addEventListener("submit", function(e){
         '</div>' +
         '<div class="text">' + txtBox[0].value +'</div>' +
     '</div>';
+
+    handleChange(medQuery);
 
     // clear the textbox
     txtBox[0].value = "";

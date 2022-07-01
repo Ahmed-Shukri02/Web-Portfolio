@@ -47,7 +47,7 @@ header{
 
 .header-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 nav{
@@ -83,7 +83,6 @@ nav li:hover{
 .current-page{
     border-radius: unset;
     color: #154663;
-    border-bottom: 1px solid #154663;
 }
 
 .current-page:hover{
